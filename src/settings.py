@@ -13,37 +13,46 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "LaRS"
+PROJECT_NAME_FULL: str = (
+    "LaRS: A Diverse Panoptic Maritime Obstacle Detection Dataset and Benchmark"
+)
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.CC_BY_NC_4_0()
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive()]
+CATEGORY: Category = Category.SelfDriving()
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
+ANNOTATION_TYPES: List[AnnotationType] = [
+    AnnotationType.SemanticSegmentation(),
+    AnnotationType.ObjectDetection(),
+]
 
-RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
+RELEASE_DATE: Optional[str] = "2023-08-01"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://lojzezust.github.io/lars-dataset/"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 11968148
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/lars"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = {
+    "Sequence images": "https://box.vicos.si/lars/lars_v1.0.0_images_seq.zip",
+    "Annotations": "https://box.vicos.si/lars/lars_v1.0.0_annotations.zip",
+    "Single-frame images": "https://box.vicos.si/lars/lars_v1.0.0_images.zip",
+}
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,19 +60,30 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = {
+    "Paper": "https://arxiv.org/abs/2308.09618",
+    "Datasheet": "https://lojzezust.github.io/lars-dataset/static/pdfs/lars_datasheet.pdf",
+}
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"some_link_to_repo_if_exists"}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {
+    "GitHub": "https://github.com/lojzezust/lars_evaluator"
+}
 
 CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
-AUTHORS_CONTACTS: Optional[List[str]] = None
+AUTHORS: Optional[List[str]] = ["Lojze Žust", "Janez Perš", "Matej Kristan"]
+AUTHORS_CONTACTS: Optional[List[str]] = [
+    "lojze.zust@fri.uni-lj.si",
+    "janez.pers@fe.uni-lj.si",
+    "matej.kristan@fri.uni-lj.si",
+]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "University of Ljubljana"
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.uni-lj.si/university/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
+    "__PRETEXT__": "Additionally, the images have ***seq name*** and ***seq id*** tags, that help associate every image with a parent sequence. Each of 8 dynamic obstacle labels has ***supercategory*** tag"
+}
 TAGS: Optional[List[str]] = None
 
 

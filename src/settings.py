@@ -14,15 +14,15 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "LaRS"
-PROJECT_NAME_FULL: str = (
-    "LaRS: A Diverse Panoptic Maritime Obstacle Detection Dataset and Benchmark"
-)
+PROJECT_NAME_FULL: str = "LaRS: Lakes Rivers and Seas dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = License.CC_BY_NC_4_0()
+LICENSE: License = License.CC_BY_NC_4_0(
+    source_url="https://lojzezust.github.io/lars-dataset/terms.html"
+)
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive()]
 CATEGORY: Category = Category.SelfDriving()
 
@@ -61,7 +61,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
 PAPER: Optional[Union[str, List[str], Dict[str, str]]] = {
-    "Paper": "https://arxiv.org/abs/2308.09618",
+    "Paper": "https://arxiv.org/pdf/2308.09618.pdf",
     "Datasheet": "https://lojzezust.github.io/lars-dataset/static/pdfs/lars_datasheet.pdf",
 }
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None

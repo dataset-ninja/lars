@@ -1,4 +1,4 @@
-**LaRS: A Diverse Panoptic Maritime Obstacle Detection Dataset and Benchmark** is a dataset for semantic segmentation and object detection tasks. It is used in the automotive industry. 
+**LaRS: Lakes Rivers and Seas dataset** is a dataset for semantic segmentation and object detection tasks. It is used in the automotive industry. 
 
 The dataset consists of 53301 images with 41852 labeled objects belonging to 12 different classes including *water*, *obstacle*, *static obstacle*, and other: *sky*, *boat/ship*, *buoy*, *row boats*, *other*, *swimmer*, *paddle board*, *animal*, and *float*.
 

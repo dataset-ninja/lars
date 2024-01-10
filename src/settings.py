@@ -23,7 +23,7 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 LICENSE: License = License.CC_BY_NC_4_0(
     source_url="https://lojzezust.github.io/lars-dataset/terms.html"
 )
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive()]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Marine()]
 CATEGORY: Category = Category.SelfDriving()
 
 CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
@@ -77,7 +77,7 @@ AUTHORS_CONTACTS: Optional[List[str]] = [
     "matej.kristan@fri.uni-lj.si",
 ]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "University of Ljubljana"
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "University of Ljubljana, Slovenia"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.uni-lj.si/university/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}

@@ -25,6 +25,6 @@ _static obstacles_ like shores and piers were annotated as stuff classes, while 
 
 <span style="font-size: smaller; font-style: italic;">Statistics of dynamic obstacle classes in LaRS (left) with respect to their size (right)..</span>
 
-Global attributes were assigned to key frames, to indicate environment type, illumination conditions, presence of reflections, surface roughness and scene conditions: **_scene type_**, **_lighting_**, **_reflections_**, **_waves_**, **_extra dark_**, **_extra bright_**, **_glitter_**, **_dirty lens_**, **_wakes_**, **_rain_**, **_fog_**, **_plants debris_** images tags.
+Global attributes were assigned to key frames, to indicate environment type, illumination conditions, presence of reflections, surface roughness and scene conditions: ***scene type***, ***lighting***, ***reflections***, ***waves***, ***extra dark***, ***extra bright***, ***glitter***, ***dirty lens***, ***wakes***, ***rain***, ***fog***, ***plants debris*** images tags.
 
 Annotation correctness was further analyzed to ensure the highest quality of the dataset. In the first pass, state-ofthe-art semantic segmentation and panoptic segmentatation methods were trained and run on the entire dataset to identify major annotation errors. The authors manually inspected all ground truth instance labels of the dynamic obstacles and identified and corrected approximately 3600 annotation errors.

@@ -26,9 +26,13 @@ LICENSE: License = License.CC_BY_NC_4_0(
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Marine()]
 CATEGORY: Category = Category.SelfDriving()
 
-CV_TASKS: List[CVTask] = [CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
+CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
+    CVTask.SemanticSegmentation(),
+    CVTask.ObjectDetection(),
+]
 ANNOTATION_TYPES: List[AnnotationType] = [
-    AnnotationType.SemanticSegmentation(),
+    AnnotationType.InstanceSegmentation(),
     AnnotationType.ObjectDetection(),
 ]
 

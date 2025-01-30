@@ -1,6 +1,6 @@
 Dataset **LaRS** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://www.dropbox.com/scl/fi/1296b8jhvsqgx3wk098d9/lars-DatasetNinja.tar?rlkey=9xsxca5vfdlqk7aso9he8yvxx&dl=1)
+ [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogImZzOi8vYXNzZXRzLzMyNzFfTGFSUy9sYXJzLURhdGFzZXROaW5qYS50YXIiLCAic2lnIjogIllmT2ZWL2t3Z2pJa1VyV0QvUVMvZXAvcjZDTndHQnlDOTgxRkVDMXk5TGs9In0=)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
